@@ -1,0 +1,25 @@
+autodetach on
+shell bash
+altscreen on
+attrcolor b ".I"
+defbce "on"
+activity "activity: window ~%"
+startup_message off
+hardstatus on
+caption always 
+caption string "%{$SCREEN_COLOR}[%y-%m-%d %c] %-w%{=b bw} %t%{-}%+w %= %?%{=b rw}%2`%{-} %?%1` %H $LEVEL"
+bindkey -k kD stuff \033[3~  # delete
+bindkey -k kP stuff ^[[5;5~
+bindkey -k kN stuff ^[[6;5~
+bindkey -m \033[5~ stuff ^B
+bindkey -m \033[6~ stuff ^F
+defscrollback 4000
+sessionname oscaro
+defutf8 on
+screen -t $LEVEL
+screen -t shell
+screen -t logs
+term xterm
+termcapinfo xterm|xterms|xs ti@:te=\E[2J
+vbell off
+

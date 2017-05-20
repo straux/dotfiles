@@ -1,0 +1,24 @@
+[user]
+	email = stephane.raux@oscaro.com
+	name = Stéphane Raux
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+[alias]
+	st = status -a
+	ci = commit 
+	co = checkout
+	br = branch
+[merge]
+	tool = vimdiff
+	summary = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[branch]
+	autosetuprebase = always
+[http]
+	sslCAInfo = /usr/share/ca-certificates/mozilla/ACEDICOM_Root.crt
+[push]
+	default = matching
